@@ -10,6 +10,7 @@
   <div class="search_block">
     <InputSearch v-model="searchKey" />
   </div>
+  <DocumentsList :search-key="searchKey" />
 </template>
 
 <script setup>
@@ -17,6 +18,7 @@ import { ref } from 'vue'
 import ButtonComponent from './components/ButtonComponent.vue';
 import ButtonFlag from './components/ButtonFlag.vue';
 import InputSearch from './components/InputSearch.vue'
+import DocumentsList from './components/DocumentsList.vue'
 
 const searchKey = ref('')
 const buttons = [{ id: 1, title: 'Новый тип' }, { id: 2, title: 'Новый документ' },]
